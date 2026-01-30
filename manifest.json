@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "YT Comment Embed",
+  "version": "1.0",
+  "description": "Embed GIFs inside YouTube comments",
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": ["<all_urls>"]
+}
